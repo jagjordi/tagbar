@@ -615,6 +615,8 @@ function! tagbar#types#ctags#init(supported_types) abort
     let type_tex.ctagstype = 'tex'
     let type_tex.kinds     = [
         \ {'short' : 'i', 'long' : 'includes',       'fold' : 1, 'stl' : 0},
+        \ {'short' : 'f', 'long' : 'frame',          'fold' : 0, 'stl' : 1},
+        \ {'short' : 'g', 'long' : 'subframe',       'fold' : 0, 'stl' : 1},
         \ {'short' : 'p', 'long' : 'parts',          'fold' : 0, 'stl' : 1},
         \ {'short' : 'c', 'long' : 'chapters',       'fold' : 0, 'stl' : 1},
         \ {'short' : 's', 'long' : 'sections',       'fold' : 0, 'stl' : 1},
@@ -627,6 +629,8 @@ function! tagbar#types#ctags#init(supported_types) abort
     let type_tex.sro        = '""'
     let type_tex.kind2scope = {
         \ 'p' : 'part',
+        \ 'f' : 'frame',
+        \ 'g' : 'subframe',
         \ 'c' : 'chapter',
         \ 's' : 'section',
         \ 'u' : 'subsection',
@@ -634,6 +638,8 @@ function! tagbar#types#ctags#init(supported_types) abort
     \ }
     let type_tex.scope2kind = {
         \ 'part'          : 'p',
+        \ 'frame'         : 'f',
+        \ 'subframe'      : 'g',
         \ 'chapter'       : 'c',
         \ 'section'       : 's',
         \ 'subsection'    : 'u',
